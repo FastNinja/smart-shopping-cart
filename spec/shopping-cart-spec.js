@@ -19,8 +19,6 @@ describe("shopping-cart", () => {
   });
 
   describe("for generic customers", () => {
-    before(() => {});
-
     it("calculates total for one product", () => {
       const shoppingCart = new ShoppingCart(
         this.customerDeals,
@@ -99,7 +97,7 @@ describe("shopping-cart", () => {
       );
     });
 
-    it("throw an error is customer is not specified", () => {
+    it("throw an error if customer is not specified", () => {
       const shoppingCart = new ShoppingCart(
         this.customerDeals,
         this.productCatalog

@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const DefaultDeal = require("../app/deals/default-deal");
+const DefaultDeal = require("../../app/deals/default-deal");
 
 describe("default-deal", () => {
   it("calculates price as normal", () => {

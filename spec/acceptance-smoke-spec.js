@@ -1,17 +1,11 @@
 const expect = require("chai").expect;
-const Configurator = require("../app/configurator");
-const ShoppingCart = require("../app/shopping-cart");
-const { CLASSIC, STANDOUT, PREMIUM } = require("../app/products");
+const { createShoppingCart } = require("../index");
+
+const { CLASSIC, STANDOUT, PREMIUM } = require("../app/configuration/products");
 
 describe("acceptance-smoke-tests", () => {
-  before(() => {
-    const config = new Configurator();
-    this.deals = config.getCustomerDeals();
-    this.products = config.getProductCatalog();
-  });
-
   beforeEach(() => {
-    this.shoppingCart = new ShoppingCart(this.deals, this.products);
+    this.shoppingCart = createShoppingCart();
   });
 
   it("Default customer", () => {

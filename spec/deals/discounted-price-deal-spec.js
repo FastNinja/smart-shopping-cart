@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const DiscountedPriceDeal = require("../app/deals/discounted-price-deal");
+const DiscountedPriceDeal = require("../../app/deals/discounted-price-deal");
 
 describe("discounted-price-deal", () => {
   it("ignores Retail price and applies discounted price", () => {

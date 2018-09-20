@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const BulkPurchaseDeal = require("../app/deals/bulk-purchase-deal");
+const BulkPurchaseDeal = require("../../app/deals/bulk-purchase-deal");
 
 describe("bulk-purchase-deal", () => {
   it("gives normal prices if not reached bulk count", () => {

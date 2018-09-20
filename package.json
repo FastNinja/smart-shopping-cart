@@ -4,14 +4,16 @@
   "description": "Smart Shopping cart solution with flexible discount rules",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive './spec/*.js'",
-    "test-smoke-only": "mocha --recursive './spec/acceptance-smoke-spec.js'"
+    "test": "mocha --recursive './spec/**/*.js'",
+    "test-with-coverage": "nyc --exclude '**/*-spec.js' mocha --recursive './spec/*.js'",
+    "test-acceptance-only": "mocha './spec/acceptance-smoke-spec.js'"
   },
   "author": "Alex M",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "sinon": "^6.3.4",
     "sinon-chai": "^3.2.0"
   }
